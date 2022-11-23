@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.2.4" client="site" method="upgrade">
+    <name>HGD - Image Compare</name>
+    <author>Holger Genth -Dienstleistungen-</author>
+    <authorUrl>https://holger-genth.de</authorUrl>
+    <version>1.2.0</version>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <description>MOD_HGD_IMAGE_COMPARE</description>
+    <updateservers>
+      <server type="extension" priority="1" element="mod_hgd-image-compare" name="HGD - Joomla Extensions Update Server">https://joomla.grenni.de/data/hgd/modules/image-compare.xml</server>
+    </updateservers>
+    <files>
+        <filename>mod_hgd-image-compare.xml</filename>
+        <filename module="mod_hgd-image-compare">mod_hgd-image-compare.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>assets</folder>
+        <folder>language</folder>
+    </files>
+    <languages>
+      <language tag="de-DE">language/de-DE/de-DE.mod_hgd-image-compare.ini</language>
+      <language tag="de-DE">language/de-DE/de-DE.mod_hgd-image-compare.sys.ini</language>
+      <language tag="en-EN">language/en-GB/en-GB.mod_hgd-image-compare.ini</language>
+      <language tag="en-EN">language/en-GB/en-GB.mod_hgd-image-compare.sys.ini</language>
+    </languages>
+    <config>
+      <fields name="params">
+        <fieldset name="basic">
+          <field name="slider-options" type="spacer" label="MOD_HGD_IMAGE_COMPARE_CONFIG_SPACER_OPTIONS_LABEL" description="MOD_HGD_IMAGE_COMPARE_CONFIG_SPACER_OPTIONS_DESC" />
+          <field name="width" type="text" default="100%" label="MOD_HGD_IMAGE_COMPARE_CONFIG_WIDTH_LABEL" description="MOD_HGD_IMAGE_COMPARE_WIDTH_DESC" filter="STRING" />
+          <field name="height" type="text" default="auto" label="MOD_HGD_IMAGE_COMPARE_CONFIG_HEIGHT_LABEL" description="MOD_HGD_IMAGE_COMPARE_CONFIG_HEIGHT_DESC" filter="STRING" />
+          <field name="max_width" type="text" default="1920" label="MOD_HGD_IMAGE_COMPARE_CONFIG_MAXWIDTH_LABEL" description="MOD_HGD_IMAGE_COMPARE_CONFIG_MAXWIDTH_DESC" filter="INT" />
+          <field name="max_height" type="text" default="0" label="MOD_HGD_IMAGE_COMPARE_CONFIG_MAXHEIGHT_LABEL" description="MOD_HGD_IMAGE_COMPARE_CONFIG_MAXHEIGHT_DESC" filter="INT" />
+          <field type="spacer" name="controls" hr="true" />
+          <field name="bgcolor" type="color" default="#ccc" label="MOD_HGD_IMAGE_COMPARE_CONFIG_CONTROLS_BACKGROUND_LABEL" description="MOD_HGD_IMAGE_COMPARE_CONFIG_CONTROLS_BACKGROUND_DESC" />
+          <field name="opacity" type="number" default="50" min="1" max="100" step="1" label="MOD_HGD_IMAGE_COMPARE_CONFIG_CONTROLS_BACKGROUND_OPACITY_LABEL" description="MOD_HGD_IMAGE_COMPARE_CONFIG_CONTROLS_BACKGROUND_OPACITY_DESC" filter="INT" />
+          <field type="spacer" name="images" hr="true" />
+          <field name="image1" type="media" directory="." preview="true" label="MOD_HGD_IMAGE_COMPARE_CONFIG_IMAGE_LABEL" description="MOD_HGD_IMAGE_COMPARE_CONFIG_IMAGE_DESC"/>
+          <field name="title1" type="text" label="MOD_HGD_IMAGE_COMPARE_CONFIG_TITLE_LABEL" description="MOD_HGD_IMAGE_COMPARE_CONFIG_TITLE_DESC" filter="STRING"/>
+
+          <field name="image2" type="media" directory="." preview="true" label="MOD_HGD_IMAGE_COMPARE_CONFIG_IMAGE_LABEL" description="MOD_HGD_IMAGE_COMPARE_CONFIG_IMAGE_DESC"/>
+          <field name="title2" type="text" label="MOD_HGD_IMAGE_COMPARE_CONFIG_TITLE_LABEL" description="MOD_HGD_IMAGE_COMPARE_CONFIG_TITLE_DESC" filter="STRING"/>
+
+        </fieldset>
+      </fields>
+    </config>
+</extension>
